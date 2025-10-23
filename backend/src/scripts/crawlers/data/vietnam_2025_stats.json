@@ -1,0 +1,16 @@
+{
+  "crawl_time": "2025-10-23T15:06:54.519325",
+  "total_cars": 6,
+  "total_motorcycles": 5,
+  "cars_by_brand": {
+    "VinFast": 2,
+    "Toyota": 2,
+    "Honda": 1,
+    "Hyundai": 1
+  },
+  "motorcycles_by_brand": {
+    "Honda": 2,
+    "Yamaha": 2,
+    "VinFast": 1
+  }
+}

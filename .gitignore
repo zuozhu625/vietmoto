@@ -1,0 +1,165 @@
+# ============================================
+# 越南摩托汽车网站 - Git忽略文件
+# ============================================
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# 依赖目录
+jspm_packages/
+bower_components/
+
+# 构建输出
+dist/
+build/
+.output/
+.vercel/
+.netlify/
+
+# Astro
+.astro/
+
+# 环境变量
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env*.local
+
+# 日志文件
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 操作系统
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*~
+
+# IDE & 编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+.project
+.classpath
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# TypeScript
+*.tsbuildinfo
+
+# 测试覆盖率
+coverage/
+*.lcov
+.nyc_output/
+
+# 缓存目录
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
+
+# 上传文件
+uploads/*
+!uploads/.gitkeep
+
+# 数据库备份
+database/backup/*.sql
+database/backup/*.sql.gz
+!database/backup/.gitkeep
+
+# Docker
+.docker/
+
+# PM2
+.pm2/
+ecosystem.config.js
+
+# 密钥和证书
+*.pem
+*.key
+*.crt
+*.p12
+ssl/
+secrets/
+
+# 本地配置
+config.local.js
+config.local.json
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# 编辑器备份
+*.bak
+*.gho
+*.ori
+*.orig
+*.rej
+
+# Python (如果使用)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# 其他
+*.pid
+*.seed
+*.pid.lock
+.grunt
+.lock-wscript
+.wafpickle-*
+
+# SSH密钥和部署文件
+deploy_key
+deploy_key.pub
+ssh_config
+*.private
+*.secret
+

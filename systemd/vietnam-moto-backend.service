@@ -1,0 +1,39 @@
+[Unit]
+Description=Vietnam Moto Auto Backend Service
+Documentation=https://github.com/vietnam-moto-auto
+After=network.target redis.service
+Wants=redis.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+WorkingDirectory=/var/www/vietnam-moto-auto/backend
+Environment=NODE_ENV=production
+Environment=PORT=4001
+Environment=DB_PATH=/var/www/vietnam-moto-auto/backend/database/vietnam_moto_auto.sqlite
+Environment=REDIS_HOST=localhost
+Environment=REDIS_PORT=6379
+Environment=JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
+ExecStart=/usr/bin/node dist/index.js
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=vietnam-moto-backend
+
+# 安全设置
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/www/vietnam-moto-auto/backend/uploads
+ReadWritePaths=/var/www/vietnam-moto-auto/backend/logs
+ReadWritePaths=/var/www/vietnam-moto-auto/backend/database
+
+# 资源限制
+LimitNOFILE=65536
+LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target
